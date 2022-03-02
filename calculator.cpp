@@ -8,12 +8,13 @@ int main()
 	beginning:
 
 	cout << "calculator" << endl;
-	cout << "************************" << endl;
-	cout << "* choose:             * " << endl;
-	cout << "* 1. regular calculator   * " << endl;
-	cout << "* 2. square root * " << endl;
-	cout << "* 3. potency  * " << endl;
-	cout << "************************" << endl;
+	cout << "****************************" << endl;
+	cout << "* choose:                  * " << endl;
+	cout << "* 1. regular calculator    * " << endl;
+	cout << "* 2. square root           * " << endl;
+	cout << "* 3. potency               * " << endl;
+	cout << "* 4. percentage calculator *"
+	cout << "****************************" << endl;
 
 	int answer;
 	cin >> answer;
@@ -102,5 +103,30 @@ int main()
 		}
 	}
 
+	if (answer == 4)
+	{
+		joku:
+		system("cls");
+		cout << "percentage calculator" << endl;
+		double number;
+		double percentage;
+		while (1)
+		{
+			cout << "type a number: ";
+			cin >> number;
+			cout << "type a percentage: ";
+			cin >> percent;
+
+			double p = percent / 100;
+			double vastaus = p * number;
+			cout << "answer is: " << vastaus << endl;
+			if (number == 0 || percent == 0)
+			{
+				system("cls");
+				goto beginning;
+			}
+		}
+	}
+	
 	return 0;
 }
